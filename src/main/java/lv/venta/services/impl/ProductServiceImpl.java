@@ -112,4 +112,19 @@ public class ProductServiceImpl implements ICRUDProductService, IFilteringProduc
 		return new ArrayList<>();
 
 	}
+
+	@Override
+	public ArrayList<Product> filterByQuantityLess(int quantity) {
+		// TODO Auto-generated method stub
+		if (quantity > 0) {
+			ArrayList<Product> allProductsWithQuantityLess = new ArrayList<>();
+			for (Product temp: allProducts) {
+				if (temp.getQuantity() < 10) {
+					allProductsWithQuantityLess.add(temp);
+				}
+			}
+			return allProductsWithQuantityLess;
+		}
+		return new ArrayList<>();
+	}
 }

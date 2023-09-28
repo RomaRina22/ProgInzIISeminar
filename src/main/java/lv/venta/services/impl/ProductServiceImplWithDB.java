@@ -90,4 +90,11 @@ public class ProductServiceImplWithDB implements ICRUDProductService, IFiltering
 		
 	}
 
+	@Override
+	public ArrayList<Product> filterByQuantityLess(int quantity) {
+		// TODO Auto-generated method stub
+		ArrayList<Product> result = productRepo.findByQuantityLessThan(quantity);
+		return result;
+	}
+
 }

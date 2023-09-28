@@ -1,7 +1,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	
 
-<table>
+<table style="tr:nth-child(even) {background-color: #D6EEEE;}">
 	<tr th:each="prod : ${myAllProducts}">
 		<td th:text="${prod.getId()}"></td>
 		<td th:text="${prod.getTitle()}"></td>

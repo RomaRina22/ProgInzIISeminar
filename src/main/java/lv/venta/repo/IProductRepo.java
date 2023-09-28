@@ -19,6 +19,8 @@ public interface IProductRepo extends CrudRepository<Product, Integer> {
 	//SELECT * FROM product_table WHERE quantity > varQ AND price < varP;
 	ArrayList<Product> findByQuantityGreaterThanAndPriceLessThan(int varQ, float varP);
 
+	ArrayList<Product> findByQuantityLessThan(int quantity);
+
 	//@Query(nativeQuery = countBy)
 	//ArrayList<Product> funcNameDoesNotMatter();
 }
