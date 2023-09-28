@@ -50,6 +50,7 @@ public class MyAuthority {
 			users.remove(user);
 		}
 	}
+	
 	public void setTitle(String title) {
 		this.title = title;
 	}
